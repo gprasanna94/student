@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DeleteServlet hello
+ * Servlet implementation class DeleteServlet hello contributors
  */
 @WebServlet("/DeleteServlet")
 public class DeleteServlet extends HttpServlet {
