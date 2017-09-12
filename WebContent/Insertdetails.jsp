@@ -11,6 +11,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>sending student details</title>
 </head>
+<script type="text/javascript">
+
+
+
+function check_info(){
+	
+	
+	var rollNo = document.getElementById('rollno').value;
+	var Name = document.getElementById('name').value;
+	var Marks = document.getElementById('marks').value;
+	
+	if (rollNo=="" || Name=="" || Marks==""){
+		
+		alert('Please fill in all fields');
+		return false;
+		
+	}   else if (rollNo<1 || rollNo>120){
+		alert('Please Enter Valid Rollno');
+		return false;
+		
+	} 	else if (Name.length<4 || Name.length>16){
+		alert('Please Enter valid Name.. Name should be in between 4 to 16 characters');
+		return false;
+		
+	}   else if (Marks<0 || Marks>100){
+		alert('Please Enter Valid Marks');
+		return false;
+	}else {
+		return true;
+	}
+
+	
+	
+}
+</script>
 <body>
 	<div class="jumbotron" >
   <div class="page-header text-center" >
@@ -23,13 +58,14 @@
 
 
 	
-	<form class="form-horizontal" name="sending student details "action="http:/School/InsertDetailsServlet" method="post">
+	<form class="form-horizontal" name="sending student details "action="http:/School/InsertDetailsServlet" method="post" onsubmit="return check_info();">
 	
 		
 		<div class="form-group">
 		<label class="control-label col-sm-4" for="rollno">ROLLNO:</label>
 		    <div class="col-sm-4">
 			    <input type="text" class="form-control" id="rollno" name="rollno">
+			     
 		    </div>
 		    </div>
 		    <br><br>
@@ -37,6 +73,7 @@
 		<label class="control-label col-sm-4" for="name">STUDENT_NAME:</label>
 		    <div class="col-sm-4">
 			    <input type="text" class="form-control" id="name" name="name">
+			 
 		    </div>
 		    </div>
 		    <br><br>
@@ -44,6 +81,7 @@
 		<label class="control-label col-sm-4" for="marks">MARKS:</label>
 		    <div class="col-sm-4">
 			    <input type="text" class="form-control" id="marks" name="marks">
+			     
 		    </div>
 		    </div>
 		    <br><br>

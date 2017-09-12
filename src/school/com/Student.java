@@ -2,11 +2,11 @@ package school.com;
 
 public class Student {
 
-	int rollno;
+	 int rollno;
 	
-	String name;
+	 String name;
 	
-	int marks;
+	 int marks;
 
 	public int getRollno() {
 		return rollno;
